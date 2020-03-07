@@ -5,7 +5,7 @@
   left: 0;
   bottom: 0;
   width: 220px;
-  background-color: #2d1f05;
+  background-color: #16250d;
   padding: 30px;
 }
 .hack-app:after {
@@ -18,5 +18,8 @@
   width: 20px;
   background-image: url('http://pics.wurzelimperium.de/pics/rahmen_hoch.jpg');
 }
-.hack-app__feature {}
+.hack-app__feature {
+  color: white;
+  margin-bottom: 30px;
+}
 .hack-app__button {}
