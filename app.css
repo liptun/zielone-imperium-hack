@@ -1,0 +1,22 @@
+.hack-app {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  background-color: #2d1f05;
+  padding: 30px;
+}
+.hack-app:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 20px;
+  background-image: url('http://pics.wurzelimperium.de/pics/rahmen_hoch.jpg');
+}
+.hack-app__feature {}
+.hack-app__button {}
