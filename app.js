@@ -28,7 +28,22 @@ if ( document.querySelector('.main_body') ) {
   document.querySelector('.main_body').appendChild(hackApp);
 }
 
+const plantsCatalog = {
+  carrot: {
+    name: 'Carrot',
+    time: 10 * 60,
+    yields: 2,
+    id: 6,
+  },
+  salad: {
+    name: 'Salad',
+    time: 14 * 60,
+    yields: 2,
+    id: 2
+  },
+}
 
+//gardenjs.showPopup('Head', 'Tekst', () => {console.log()})
 
 function trans(str) {
   const transStr = [];
