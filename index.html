@@ -3,14 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hack</title>
+  <title>Hack toolset</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu:300,400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+    }
+    code {
+      font-family: 'Ubuntu Mono', monospace;
+    }
+  </style>
 </head>
 <body>
-  <p>Run this script</p>
-  <pre>
-const hackLoader = document.createElement('script');
+  <main>
+    <h1>Zielone Imperium - Helpers</h1>
+    <p>Run this script on garden page:</p>
+<pre><code class="javascript">const hackLoader = document.createElement('script');
 hackLoader.src = 'https://cdn.liptun.dev/zieloneimperium/app.js';
 document.querySelector('.main_body').appendChild(hackLoader);
-  </pre>
+</code></pre>
+  </main>
+
 </body>
 </html>
