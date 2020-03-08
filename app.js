@@ -10,34 +10,24 @@ if ( document.querySelector('.main_body') ) {
 // main hack container
 const hackApp = document.createElement('aside');
 hackApp.classList.add('hack-app');
+hackApp.innerHTML = `
+  <div class="hack-app__feature">
+    <h2>Water all</h2>
+    <button onclick="hack.waterAll();">Run</button>
+  </div>
+  <div class="hack-app__feature hack-app__feature--disabled">
+    <h2>Harvest all</h2>
+    <button onclick="hack.harvestAll();">Run</button>
+  </div>
+  <div class="hack-app__feature">
+    <h2>Plant all</h2>
+    <button onclick="hack.plantAll();">Run</button>
+  </div>
+`;
 if ( document.querySelector('.main_body') ) {
   document.querySelector('.main_body').appendChild(hackApp);
 }
 
-// water all
-const hackWaterAll = document.createElement('div');
-hackWaterAll.classList.add('hack-app__feature');
-hackWaterAll.innerHTML = `
-  <h2>Water all</h2>
-  <button onclick="hack.waterAll();">Run</button>
-`;
-hackApp.appendChild(hackWaterAll);
-
-const hackHarvestAll = document.createElement('div');
-hackHarvestAll.classList.add('hack-app__feature');
-hackHarvestAll.innerHTML = `
-  <h2>Harvest all</h2>
-  <button onclick="hack.harvestAll();">Run</button>
-`;
-hackApp.appendChild(hackHarvestAll);
-
-const hackPlantAll = document.createElement('div');
-hackPlantAll.classList.add('hack-app__feature');
-hackPlantAll.innerHTML = `
-  <h2>Plant all</h2>
-  <button onclick="hack.plantAll();">Run</button>
-`;
-hackApp.appendChild(hackPlantAll);
 
 
 function trans(str) {
@@ -65,10 +55,14 @@ function getField(field) {
   };
 }
 
+
+
+
 const hack = {
   clickByType(type, inverse = false) {
 
   },
+
   clickWaterable() {
     console.log('click all waterable fields');
     document.querySelectorAll('.feld').forEach( el => {
@@ -78,6 +72,7 @@ const hack = {
       }
     });
   },
+
   clickPlantable() {
     console.log('click all plantable fields');
     let index = 0;
@@ -91,6 +86,7 @@ const hack = {
       }
     });
   },
+
   clickHarvestable() {
     console.log('click all harvestable fields');
     document.querySelectorAll('.feld').forEach( el => {
@@ -100,18 +96,22 @@ const hack = {
       }
     });
   },
+
   waterAll() {
     selectMode(2, true, selected);
     this.clickWaterable();
   },
+
   plantAll() {
     selectMode(0,true,selected);
     this.clickPlantable();
   },
+
   harvestAll() {
     selectMode(1,true,selected);
     this.clickHarvestable();
   },
+
   dump() {
     document.querySelectorAll('.feld').forEach(el => {
       console.log(getField(el));
