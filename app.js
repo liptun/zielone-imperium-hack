@@ -3,7 +3,7 @@ console.log('%cHack initialized','background:black;color:red;padding:2px');
 // styles
 const hackStyles = document.createElement('link');
 hackStyles.rel = 'stylesheet';
-hackStyles.href = 'http://localhost/app.css';
+hackStyles.href = 'https://liptun.github.io/zielone-imperium-hack/app.css';
 if ( document.querySelector('.main_body') ) {
   document.querySelector('.main_body').appendChild(hackStyles);
 }
